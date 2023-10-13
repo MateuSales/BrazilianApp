@@ -7,18 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE4157F02AD9B03E009913C5 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4157EF2AD9B03E009913C5 /* Score.swift */; };
 		CEA9EE6E2AD76098001AD77A /* BrasiliaAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA9EE6D2AD76098001AD77A /* BrasiliaAppApp.swift */; };
 		CEA9EE702AD76098001AD77A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA9EE6F2AD76098001AD77A /* ContentView.swift */; };
 		CEA9EE722AD76099001AD77A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA9EE712AD76099001AD77A /* Assets.xcassets */; };
 		CEA9EE752AD76099001AD77A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA9EE742AD76099001AD77A /* Preview Assets.xcassets */; };
+		CEA9EE7C2AD7717E001AD77A /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA9EE7B2AD7717E001AD77A /* ResultView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE4157EF2AD9B03E009913C5 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		CEA9EE6A2AD76098001AD77A /* BrasiliaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrasiliaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA9EE6D2AD76098001AD77A /* BrasiliaAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrasiliaAppApp.swift; sourceTree = "<group>"; };
 		CEA9EE6F2AD76098001AD77A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CEA9EE712AD76099001AD77A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEA9EE742AD76099001AD77A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CEA9EE7B2AD7717E001AD77A /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +36,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE4157ED2AD9B02E009913C5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEA9EE7B2AD7717E001AD77A /* ResultView.swift */,
+				CEA9EE6F2AD76098001AD77A /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE4157EE2AD9B035009913C5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE4157EF2AD9B03E009913C5 /* Score.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		CEA9EE612AD76098001AD77A = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +72,9 @@
 		CEA9EE6C2AD76098001AD77A /* BrasiliaApp */ = {
 			isa = PBXGroup;
 			children = (
+				CE4157EE2AD9B035009913C5 /* Models */,
+				CE4157ED2AD9B02E009913C5 /* Views */,
 				CEA9EE6D2AD76098001AD77A /* BrasiliaAppApp.swift */,
-				CEA9EE6F2AD76098001AD77A /* ContentView.swift */,
 				CEA9EE712AD76099001AD77A /* Assets.xcassets */,
 				CEA9EE732AD76099001AD77A /* Preview Content */,
 			);
@@ -139,6 +161,8 @@
 			files = (
 				CEA9EE702AD76098001AD77A /* ContentView.swift in Sources */,
 				CEA9EE6E2AD76098001AD77A /* BrasiliaAppApp.swift in Sources */,
+				CE4157F02AD9B03E009913C5 /* Score.swift in Sources */,
+				CEA9EE7C2AD7717E001AD77A /* ResultView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +296,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BrasiliaApp/Preview Content\"";
+				DEVELOPMENT_TEAM = WQZ2MQC43F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -300,6 +325,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BrasiliaApp/Preview Content\"";
+				DEVELOPMENT_TEAM = WQZ2MQC43F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
