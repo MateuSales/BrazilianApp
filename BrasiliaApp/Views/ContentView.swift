@@ -3,7 +3,6 @@ import SwiftUI
 struct ContentView: View {
     @State private var isPresentedResultView = false
     @EnvironmentObject var game: GameDataSource
-//    @State /*var timeRemaining = 3*/
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     

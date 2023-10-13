@@ -17,17 +17,19 @@ struct ResultView: View {
                 .font(.title)
                 .bold()
             
-            VStack {
+            HStack {
                 Text("Mandou bem!")
                     .bold()
                     .foregroundStyle(.white)
-                    .padding([.top], 8)
+                    .padding([.vertical, .horizontal], 24)
+                
+                Spacer()
                 
                 Image(systemName: "hand.thumbsup.fill")
                     .resizable()
                     .foregroundStyle(.white)
                     .frame(width: 40, height: 40)
-                    .padding([.bottom], 8)
+                    .padding([.trailing], 24)
             }
             .frame(maxWidth: .infinity)
             .background(.blue)
