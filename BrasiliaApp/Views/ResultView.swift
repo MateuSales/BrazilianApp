@@ -1,7 +1,8 @@
 import SwiftUI
 
 struct ResultView: View {
-    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.dismiss) var dismiss
+    @EnvironmentObject var game: GameDataSource
     
     var body: some View {
         VStack(spacing: 16) {
@@ -29,7 +30,7 @@ struct ResultView: View {
                     .padding([.bottom], 8)
             }
             .frame(maxWidth: .infinity)
-            .background(.green)
+            .background(.blue)
             .clipShape(RoundedRectangle(cornerRadius: 16))
 
             HStack {
@@ -40,7 +41,7 @@ struct ResultView: View {
                 
                 Spacer()
                 
-                Text("43 pontos")
+                Text("\(game.getScore()) pontos")
                     .font(.title3)
                     .foregroundStyle(.white)
                     .bold()
@@ -62,10 +63,11 @@ struct ResultView: View {
                     .bold()
             }
             .frame(width: 124, height: 124)
-            .background(.blue)
+            .background(.green)
             .clipShape(RoundedRectangle(cornerRadius: 16))
             .onTapGesture {
-                presentationMode.wrappedValue.dismiss()
+                dismiss()
+                game.reset()
             }
             
         }

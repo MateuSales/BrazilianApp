@@ -1,10 +1,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var isPresentedResultView = true
-    @State var images = ["lion"]
+    @State private var isPresentedResultView = false
+    @EnvironmentObject var game: GameDataSource
+//    @State /*var timeRemaining = 3*/
     
-    private var score = Score()
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
         VStack(alignment: .leading, spacing: 24) {
@@ -12,23 +13,39 @@ struct ContentView: View {
                 .font(.title)
                 .bold()
             
-            Text("Use gestão, expressões e mímicas para reproduzir a imagem abaixo!")
-            
-            Image("lion")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(height: 300)
-                .clipShape(RoundedRectangle(cornerRadius: 16))
+            Text("Faça uma mímica que represente a palavra abaixo para que as pessoas tentem acertar!")
             
             VStack {
-                Text("Tempo restante")
+                Text(game.getVerb())
+                    .font(.largeTitle)
+                    .bold()
+                    .foregroundStyle(.white)
+                    .textCase(.uppercase)
+                
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(.blue)
+            .clipShape(RoundedRectangle(cornerRadius: 16))
+            
+            VStack {
+                Text("Tempo restante em segundos")
                     .bold()
                     .foregroundStyle(.white)
                 
-                Text("01:21")
+                
+                Text("\(game.timeRemaining)")
                     .font(.title)
                     .foregroundStyle(.white)
                     .bold()
+                    .onReceive(timer) { _ in
+                        if game.timeRemaining > 0 {
+                            game.timeRemaining -= 1
+                        }
+                        
+                        if game.timeRemaining == 0 {
+                            isPresentedResultView = true
+                        }
+                    }
             }
             .frame(maxWidth: .infinity, minHeight: 77)
             .background(.blue)
@@ -47,7 +64,7 @@ struct ContentView: View {
                 .background(.red)
                 .clipShape(RoundedRectangle(cornerRadius: 16))
                 .onTapGesture {
-                    score.decrement()
+                    game.didTapButton(.down)
                 }
                 
                 VStack {
@@ -60,7 +77,7 @@ struct ContentView: View {
                 .background(.green)
                 .clipShape(RoundedRectangle(cornerRadius: 16))
                 .onTapGesture {
-                    score.increment()
+                    game.didTapButton(.up)
                 }
                 
                 Spacer()
@@ -69,8 +86,11 @@ struct ContentView: View {
             Spacer()
         }
         .padding()
+        .fullScreenCover(isPresented: $isPresentedResultView) {
+            ResultView()
+        }
         .onAppear {
-            score.reset()
+            print("Aqui")
         }
     }
 }

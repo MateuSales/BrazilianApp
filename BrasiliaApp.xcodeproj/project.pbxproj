@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE4157F02AD9B03E009913C5 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4157EF2AD9B03E009913C5 /* Score.swift */; };
+		CE4157F22AD9D2BE009913C5 /* verbs.json in Resources */ = {isa = PBXBuildFile; fileRef = CE4157F12AD9D2BE009913C5 /* verbs.json */; };
+		CE4157F52AD9D2ED009913C5 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4157F42AD9D2ED009913C5 /* Utils.swift */; };
+		CE4157F72AD9D32C009913C5 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4157F62AD9D32C009913C5 /* Response.swift */; };
+		CE4157F92AD9D939009913C5 /* GameDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4157F82AD9D939009913C5 /* GameDataSource.swift */; };
+		CE4157FB2AD9DC49009913C5 /* ButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4157FA2AD9DC49009913C5 /* ButtonType.swift */; };
 		CEA9EE6E2AD76098001AD77A /* BrasiliaAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA9EE6D2AD76098001AD77A /* BrasiliaAppApp.swift */; };
 		CEA9EE702AD76098001AD77A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA9EE6F2AD76098001AD77A /* ContentView.swift */; };
 		CEA9EE722AD76099001AD77A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA9EE712AD76099001AD77A /* Assets.xcassets */; };
@@ -16,7 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CE4157EF2AD9B03E009913C5 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		CE4157F12AD9D2BE009913C5 /* verbs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = verbs.json; sourceTree = "<group>"; };
+		CE4157F42AD9D2ED009913C5 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		CE4157F62AD9D32C009913C5 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		CE4157F82AD9D939009913C5 /* GameDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDataSource.swift; sourceTree = "<group>"; };
+		CE4157FA2AD9DC49009913C5 /* ButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonType.swift; sourceTree = "<group>"; };
 		CEA9EE6A2AD76098001AD77A /* BrasiliaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrasiliaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA9EE6D2AD76098001AD77A /* BrasiliaAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrasiliaAppApp.swift; sourceTree = "<group>"; };
 		CEA9EE6F2AD76098001AD77A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,9 +56,20 @@
 		CE4157EE2AD9B035009913C5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CE4157EF2AD9B03E009913C5 /* Score.swift */,
+				CE4157F62AD9D32C009913C5 /* Response.swift */,
+				CE4157F82AD9D939009913C5 /* GameDataSource.swift */,
+				CE4157FA2AD9DC49009913C5 /* ButtonType.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CE4157F32AD9D2E6009913C5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CE4157F12AD9D2BE009913C5 /* verbs.json */,
+				CE4157F42AD9D2ED009913C5 /* Utils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		CEA9EE612AD76098001AD77A = {
@@ -72,6 +91,7 @@
 		CEA9EE6C2AD76098001AD77A /* BrasiliaApp */ = {
 			isa = PBXGroup;
 			children = (
+				CE4157F32AD9D2E6009913C5 /* Utils */,
 				CE4157EE2AD9B035009913C5 /* Models */,
 				CE4157ED2AD9B02E009913C5 /* Views */,
 				CEA9EE6D2AD76098001AD77A /* BrasiliaAppApp.swift */,
@@ -149,6 +169,7 @@
 			files = (
 				CEA9EE752AD76099001AD77A /* Preview Assets.xcassets in Resources */,
 				CEA9EE722AD76099001AD77A /* Assets.xcassets in Resources */,
+				CE4157F22AD9D2BE009913C5 /* verbs.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,10 +180,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE4157F72AD9D32C009913C5 /* Response.swift in Sources */,
+				CE4157FB2AD9DC49009913C5 /* ButtonType.swift in Sources */,
+				CE4157F52AD9D2ED009913C5 /* Utils.swift in Sources */,
 				CEA9EE702AD76098001AD77A /* ContentView.swift in Sources */,
 				CEA9EE6E2AD76098001AD77A /* BrasiliaAppApp.swift in Sources */,
-				CE4157F02AD9B03E009913C5 /* Score.swift in Sources */,
 				CEA9EE7C2AD7717E001AD77A /* ResultView.swift in Sources */,
+				CE4157F92AD9D939009913C5 /* GameDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
