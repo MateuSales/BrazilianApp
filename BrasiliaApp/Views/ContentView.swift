@@ -8,7 +8,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 24) {
-            Text("MíMiCa")
+            Text("Mímica")
                 .font(.title)
                 .bold()
             
@@ -87,9 +87,6 @@ struct ContentView: View {
         .padding()
         .fullScreenCover(isPresented: $isPresentedResultView) {
             ResultView()
-        }
-        .onAppear {
-            print("Aqui")
         }
     }
 }

@@ -6,7 +6,7 @@ struct BrasiliaAppApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            InitialView()
                 .environment(game)
         }
     }

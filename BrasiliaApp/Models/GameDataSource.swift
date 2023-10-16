@@ -5,6 +5,7 @@ class GameDataSource: ObservableObject, Observable {
     @Published private var verbs: [String] = []
     @Published var timeRemaining = 90
     private var score = 0
+    private var currentVerb = ""
     
     init() {
         verbs = Bundle.main.decode(Response.self, from: "verbs.json").verbs
@@ -17,7 +18,8 @@ class GameDataSource: ObservableObject, Observable {
     }
     
     func getVerb() -> String {
-        if let word = verbs.first {
+        if let word = verbs.randomElement() {
+            currentVerb = word
             return word
         }
         
@@ -36,8 +38,7 @@ class GameDataSource: ObservableObject, Observable {
                 decrement()
         }
         
-        verbs.removeFirst()
-        verbs.shuffle()
+        verbs.removeAll { $0 == currentVerb }
     }
     
     // MARK: - Private Methods

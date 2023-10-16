@@ -12,6 +12,7 @@
 		CE4157F72AD9D32C009913C5 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4157F62AD9D32C009913C5 /* Response.swift */; };
 		CE4157F92AD9D939009913C5 /* GameDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4157F82AD9D939009913C5 /* GameDataSource.swift */; };
 		CE4157FB2AD9DC49009913C5 /* ButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4157FA2AD9DC49009913C5 /* ButtonType.swift */; };
+		CE71598D2ADCBB1E00F6FA5E /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE71598C2ADCBB1E00F6FA5E /* InitialView.swift */; };
 		CEA9EE6E2AD76098001AD77A /* BrasiliaAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA9EE6D2AD76098001AD77A /* BrasiliaAppApp.swift */; };
 		CEA9EE702AD76098001AD77A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA9EE6F2AD76098001AD77A /* ContentView.swift */; };
 		CEA9EE722AD76099001AD77A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA9EE712AD76099001AD77A /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 		CE4157F62AD9D32C009913C5 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		CE4157F82AD9D939009913C5 /* GameDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDataSource.swift; sourceTree = "<group>"; };
 		CE4157FA2AD9DC49009913C5 /* ButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonType.swift; sourceTree = "<group>"; };
+		CE71598C2ADCBB1E00F6FA5E /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
 		CEA9EE6A2AD76098001AD77A /* BrasiliaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrasiliaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA9EE6D2AD76098001AD77A /* BrasiliaAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrasiliaAppApp.swift; sourceTree = "<group>"; };
 		CEA9EE6F2AD76098001AD77A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 			children = (
 				CEA9EE7B2AD7717E001AD77A /* ResultView.swift */,
 				CEA9EE6F2AD76098001AD77A /* ContentView.swift */,
+				CE71598C2ADCBB1E00F6FA5E /* InitialView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE4157F72AD9D32C009913C5 /* Response.swift in Sources */,
+				CE71598D2ADCBB1E00F6FA5E /* InitialView.swift in Sources */,
 				CE4157FB2AD9DC49009913C5 /* ButtonType.swift in Sources */,
 				CE4157F52AD9D2ED009913C5 /* Utils.swift in Sources */,
 				CEA9EE702AD76098001AD77A /* ContentView.swift in Sources */,
@@ -323,11 +327,11 @@
 				DEVELOPMENT_TEAM = WQZ2MQC43F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Mimica;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,9 +339,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.nnt.BrasiliaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -352,11 +359,11 @@
 				DEVELOPMENT_TEAM = WQZ2MQC43F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Mimica;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -364,9 +371,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.nnt.BrasiliaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
