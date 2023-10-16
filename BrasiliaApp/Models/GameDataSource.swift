@@ -15,6 +15,8 @@ class GameDataSource: ObservableObject, Observable {
     
     func reset() {
         verbs = Bundle.main.decode(Response.self, from: "verbs.json").verbs
+        verbs.shuffle()
+        currentVerb = verbs[0]
         score = 0
         timeRemaining = 60
     }
