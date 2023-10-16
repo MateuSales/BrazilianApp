@@ -3,27 +3,24 @@ import Foundation
 
 class GameDataSource: ObservableObject, Observable {
     @Published private var verbs: [String] = []
-    @Published var timeRemaining = 90
+    @Published var timeRemaining = 60
     private var score = 0
     private var currentVerb = ""
     
     init() {
         verbs = Bundle.main.decode(Response.self, from: "verbs.json").verbs
+        verbs.shuffle()
+        currentVerb = verbs[0]
     }
     
     func reset() {
         verbs = Bundle.main.decode(Response.self, from: "verbs.json").verbs
         score = 0
-        timeRemaining = 90
+        timeRemaining = 60
     }
     
     func getVerb() -> String {
-        if let word = verbs.randomElement() {
-            currentVerb = word
-            return word
-        }
-        
-        fatalError("O array ficou vazio ❌")
+        currentVerb
     }
     
     func getScore() -> Int {
@@ -39,6 +36,9 @@ class GameDataSource: ObservableObject, Observable {
         }
         
         verbs.removeAll { $0 == currentVerb }
+        if let word = verbs.randomElement() {
+            currentVerb = word
+        }
     }
     
     // MARK: - Private Methods

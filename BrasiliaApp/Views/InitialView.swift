@@ -19,6 +19,7 @@ struct InitialView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 16))
             
             Text("Começar")
+                .font(.title2)
                 .bold()
                 .foregroundStyle(.white)
                 .padding([.vertical, .horizontal], 24)
